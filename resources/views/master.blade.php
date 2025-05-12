@@ -9,6 +9,8 @@
     
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href=" {{ asset('css/hero/bootstrap.css') }} " />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- font awesome style -->
     <link href=" {{ asset('css/hero/font-awesome.min.css') }} " rel="stylesheet" />
     <!-- Custom styles for this template -->
@@ -22,7 +24,7 @@
 
     @include('partials.navbar')
 
-    @if (route('shop.index'))
+    @if (request()->routeIs('shop.index'))
       @include('partials.hero')
     @endif
     
@@ -30,7 +32,7 @@
 
     @yield('main')
 
-    <a href="/admin/main">Admin</a>
+    <a href="/admin/main">Master Page</a>
 
    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>

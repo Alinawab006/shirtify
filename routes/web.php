@@ -12,6 +12,7 @@ Route::get("/", [ShopController::class, 'index'])->name('shop.index');
 Route::get('/shirt/{slug}', [ShopController::class, 'detail'])->name('shop.detail');
 
 
+
 Route::get("/login", [AuthController::class, 'loginForm'])->name("loginForm");
 Route::post("/login", [AuthController::class, 'login'])->name("login");
 Route::post("/logout", [AuthController::class, 'logout'])->name('logout');

@@ -21,4 +21,10 @@ class ShopController extends Controller
         }
         return view('blog.index' , ['products' => $products , 'category' =>$category_name]);
     }
+
+    public function detail($slug) {
+        $product = Shirt::where('slug', $slug)->first();
+        //dd($product);
+        return view('blog.detail' , ['product' => $product]);
+    }
 }
